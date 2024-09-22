@@ -8,18 +8,18 @@ This project is inspired from [TomDoesTech's](https://github.com/TomDoesTech) [G
 
 The GoTTH stack includes the following Languages and Technologies:
 
-1. **Go** with Chi Router.
+1. **Golang** and **default ServeMux**.
 2. **TailwindCSS** Standalone Executable.
 3. **Turso** LibSQL (SQLite for Production).
 4. **HTMX** with Templ as Templating Engine.
 
-## Installation Guide
+## Run the project
 
-### Chi Router
-
-```bash
-go get -u github.com/go-chi/chi/v5
 ```
+air
+```
+
+## Installation Guide
 
 ### Air for Live Reload
 
@@ -59,4 +59,34 @@ go get github.com/tursodatabase/libsql-client-go/libsql
 ```
 PORT=8080
 DB_URL=libsql://yourDBName-tursoUserName.turso.io?authToken=yourAuthToken
+```
+
+## Basic Project Guide
+
+```
+GOTTH
+│
+├── /internal/                        # Private application and business logic
+│   ├── /server/                     # Server-specific logic
+│   │   ├── server.go             # Core server logic
+│   │   └── routes.go             # Route definitions
+│   └── /database/                 # Database-related logic
+│       └── database.go          # Database connection and queries
+│
+├── /static/                             # Static assets (CSS, JS, images, etc.)
+│   ├── /css/                           # CSS files
+│   │   ├── input.css              # Tailwind input file
+│   │   └── style.css               # Generated CSS file
+│   └── /scripts/                     # JavaScript files
+│       └── htmx.min.js           # HTMX JavaScript library
+│
+├── /web/                               # Web UI-related handlers
+│       ├── hello.templ            # Templating file for the hello page
+│       └── hello.go                 # Hello handler logic
+│
+├── main.go                           # Application entry point
+├── Makefile                          # Build automation script
+├── .air.toml                           # Air live reloading config file
+├── tailwind.config.js             # Tailwind CSS configuration
+└── tailwindcss                       # Tailwind CSS binary file
 ```

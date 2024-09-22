@@ -3,7 +3,6 @@ package database
 import (
 	"context"
 	"database/sql"
-	"fmt"
 	"log"
 	"os"
 	"time"
@@ -33,16 +32,38 @@ func New() Service {
 	return s
 }
 
+// Write functions related to DB like checking health, querying data, here
+
 func (s *service) Health() map[string]string {
 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
 	defer cancel()
 
 	err := s.db.PingContext(ctx)
 	if err != nil {
-		log.Fatalf(fmt.Sprintf("db down: %v", err))
+		return map[string]string{
+			"error": "DB is Down",
+		}
 	}
 
 	return map[string]string{
 		"message": "It's healthy",
 	}
 }
+
+/* You can refer to this demo function :
+
+func (s *service) GetUserByID(id string) string {
+	stmt := `SELECT username FROM users WHERE id= ? `
+	row := s.db.QueryRow(stmt, id)
+	var userName string
+	err := row.Scan(&userName)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			log.Println("No rows selected")
+			return ""
+		}
+		log.Fatal(err)
+	}
+	return userName
+}
+*/

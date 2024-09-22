@@ -14,7 +14,7 @@ templ-generate:
 build:
 	make templ-generate
 	make tailwind-build
-	@go build -o tmp/main cmd/api/main.go
+	@go build -o tmp/main main.go
 
 # Live Reload
 watch:
