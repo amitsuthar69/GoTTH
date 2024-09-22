@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"gotth/internal/middlewares"
 	"gotth/web"
 
 	"github.com/a-h/templ"
@@ -23,7 +24,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 	mux.Handle("/", templ.Handler(web.HelloForm()))
 	mux.HandleFunc("/hello", web.HelloWebHandler)
 
-	return mux
+	return middlewares.Logger(mux)
 }
 
 func (s *Server) healthHandler(w http.ResponseWriter, r *http.Request) {
