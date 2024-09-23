@@ -4,11 +4,20 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"gotth/internal/middlewares"
+	"gotth/internal/middleware"
 	"gotth/web"
 
 	"github.com/a-h/templ"
 )
+
+type Middleware func(http.Handler) http.Handler
+
+func Use(h http.Handler, middlewares ...Middleware) http.Handler {
+	for _, middleware := range middlewares {
+		h = middleware(h)
+	}
+	return h
+}
 
 func (s *Server) RegisterRoutes() http.Handler {
 	mux := http.NewServeMux()
@@ -24,7 +33,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 	mux.Handle("/", templ.Handler(web.HelloForm()))
 	mux.HandleFunc("/hello", web.HelloWebHandler)
 
-	return middlewares.Logger(mux)
+	return Use(mux, middleware.Logger, middleware.Auth)
 }
 
 func (s *Server) healthHandler(w http.ResponseWriter, r *http.Request) {
