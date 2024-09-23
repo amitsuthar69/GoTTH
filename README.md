@@ -1,12 +1,12 @@
 # GoTTH Stack
 
-The **GoTTH Stack** is designed to quickly spin up a Full-Stack Golang Web Application with database support.
+**GoTTH** is designed to quickly spin up a Full-Stack Golang Web Application with database support.
 
 ## About the Stack
 
 Includes following Languages and Technologies:
 
-1. **Golang** and **default ServeMux**.
+1. **Golang** with **ServeMux**.
 2. **TailwindCSS** Standalone Executable.
 3. **Turso** LibSQL (SQLite for Production).
 4. **HTMX** with **Templ** as Templating Engine.
@@ -68,8 +68,10 @@ GOTTH
 │   ├── /server/               # Server-specific logic
 │   │   ├── server.go          # Core server logic
 │   │   └── routes.go          # Route definitions
-│   └── /database/             # Database-related logic
-│       └── database.go        # Database connection and queries
+│   ├── /database/             # Database-related logic
+│   |   └── database.go        # Database connection and queries
+│   └── /middleware/           # Middlewares
+│       └── logger.go          # Logger middleware
 │
 ├── /static/                   # Static assets (CSS, JS, images, etc.)
 │   ├── /css/                  # CSS files
@@ -83,10 +85,10 @@ GOTTH
 │       └── hello.go           # Hello handler logic
 │
 ├── main.go                    # Application entry point
-├── Makefile                   # Build automation script
+├── Makefile                   # Build automation scripts
 ├── .air.toml                  # Air live reloading config file
 ├── tailwind.config.js         # Tailwind CSS configuration
-└── tailwindcss                # Tailwind CSS binary or related file
+└── tailwindcss                # Tailwind CSS binary
 ```
 
 ---
