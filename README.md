@@ -19,6 +19,26 @@ air
 
 ## Installation Guide
 
+1. Using Docker
+
+```
+docker pull amitsuthar69/gotth:1.0
+```
+
+```
+docker run -p 8080:8080 amitsuthar69/gotth:1.0
+```
+
+OR
+
+2. Build from source
+
+### Clone repository
+
+```
+git clone https://github.com/amitsuthar69/GoTTH.git
+```
+
 ### Air for Live Reload
 
 ```bash
