@@ -113,4 +113,6 @@ GOTTH
 
 ---
 
-Inspired from [TomDoesTech's](https://github.com/TomDoesTech) [GoTTH](https://github.com/TomDoesTech/GOTTH) stack, but with a simpler folder structure and an Integrated Turso LibSQL Database Support.
+> If you really appreciate the efforts :
+>
+<a href="https://www.buymeacoffee.com/amitsuthar" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
