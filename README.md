@@ -116,3 +116,17 @@ GOTTH
 > If you really appreciate the efforts :
 >
 <a href="https://www.buymeacoffee.com/amitsuthar" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+
+---
+
+
+## Star History
+
+<a href="https://star-history.com/#amitsuthar69/GoTTH&Timeline">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=amitsuthar69/GoTTH&type=Timeline&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=amitsuthar69/GoTTH&type=Timeline" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=amitsuthar69/GoTTH&type=Timeline" />
+ </picture>
+</a>
